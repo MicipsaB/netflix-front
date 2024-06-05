@@ -27,12 +27,13 @@ function App() {
     // -----------------------------------------------------------------
 
     <div className="container">
-      <Section elem={movies[0]} />
-      <Section elem={movies[1]} />
-      <Section elem={movies[2]} />
-      <Section elem={movies[3]} />
-      <Section elem={movies[4]} />
-      <Section elem={movies[5]} />
+      {movies.map((elem) => {
+        return (
+          <>
+            <Section elem={elem} />
+          </>
+        );
+      })}
     </div>
   );
 }
